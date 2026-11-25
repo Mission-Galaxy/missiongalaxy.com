@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>document.documentElement.classList.add("js");</script>
+    <style>html.js #mg-static { display: none; }</style>
     <title>Mission Galaxy — Coming 2027</title>
     <meta
       name="description"
@@ -20,6 +22,37 @@
     <meta property="og:url" content="https://missiongalaxy.com/" />
     <meta property="og:image" content="https://missiongalaxy.com/og.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://missiongalaxy.com/#organization",
+          "name": "Mission Galaxy",
+          "url": "https://missiongalaxy.com/",
+          "description": "Mission Galaxy — a colony-management simulation on a hostile alien frontier. Coming 2027.",
+          "parentOrganization": [
+            {
+              "@type": "Organization",
+              "name": "Advisors Group International Inc"
+            },
+            {
+              "@type": "Organization",
+              "name": "Town4 Media Group"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://missiongalaxy.com/#website",
+          "url": "https://missiongalaxy.com/",
+          "name": "Mission Galaxy",
+          "publisher": { "@id": "https://missiongalaxy.com/#organization" }
+        }
+      ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,9 +67,41 @@
 </style>
   </head>
   <body class="bg-bg text-fg">
-    <noscript>
-      <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight text-balance text-fg sm:text-7xl lg:text-8xl">Mission Galaxy</h1>
-    </noscript>
+    <div id="mg-static">
+      <header class="border-b border-border bg-bg px-4 py-3 sm:px-8">
+        <nav class="flex flex-wrap items-center gap-7" aria-label="Primary">
+          <a href="/#mission" class="font-display text-[0.72rem] font-semibold tracking-[0.22em] text-fg/80 uppercase">Mission</a>
+          <a href="/#systems" class="font-display text-[0.72rem] font-semibold tracking-[0.22em] text-fg/80 uppercase">Systems</a>
+          <a href="/#roster" class="font-display text-[0.72rem] font-semibold tracking-[0.22em] text-fg/80 uppercase">Roster</a>
+          <a href="/#community" class="font-display text-[0.72rem] font-semibold tracking-[0.22em] text-fg/80 uppercase">Community</a>
+        </nav>
+      </header>
+      <main class="px-5 py-24 sm:px-10 lg:px-16">
+        <p class="font-display text-[0.78rem] font-semibold tracking-[0.48em] text-steel uppercase">A game in development</p>
+        <h1 class="mt-4 font-display text-6xl font-semibold tracking-tight text-balance text-fg sm:text-7xl lg:text-8xl">Mission Galaxy</h1>
+        <p class="mt-8 font-display text-sm tracking-[0.38em] text-gold uppercase">Coming 1 January 2027</p>
+        <p class="mt-5 max-w-lg text-lg leading-relaxed text-pretty text-muted">Mission Galaxy — a colony-management simulation on a hostile alien frontier. Coming 2027.</p>
+        <section id="mission" class="mt-12 scroll-mt-24">
+          <h2 class="font-display text-[0.72rem] font-semibold tracking-[0.42em] text-steel uppercase">Mission</h2>
+          <p class="mt-5 max-w-lg text-lg leading-relaxed text-pretty text-muted">You run a small human settlement on a hostile frontier.</p>
+        </section>
+        <section id="systems" class="mt-12 scroll-mt-24">
+          <h2 class="font-display text-[0.72rem] font-semibold tracking-[0.42em] text-steel uppercase">Systems</h2>
+        </section>
+        <section id="roster" class="mt-12 scroll-mt-24">
+          <h2 class="font-display text-[0.72rem] font-semibold tracking-[0.42em] text-steel uppercase">Roster</h2>
+          <p class="mt-5 max-w-lg text-base leading-relaxed text-pretty text-muted">Join the launch list. Email updates when the first public window opens.</p>
+          <p class="mt-8"><a href="/#roster" class="inline-flex min-h-11 items-center border border-fg px-5 font-display text-[0.82rem] font-semibold tracking-[0.22em] text-fg uppercase">Join the roster</a></p>
+        </section>
+        <section id="community" class="mt-12 scroll-mt-24">
+          <h2 class="font-display text-[0.72rem] font-semibold tracking-[0.42em] text-steel uppercase">Community</h2>
+        </section>
+      </main>
+      <footer class="border-t border-border bg-bg-deep px-4 py-10 text-center sm:px-8">
+        <p class="mx-auto mt-3 max-w-xl text-xs leading-relaxed text-pretty text-dim">An independent game development of Advisors Group International Inc and Town4 Media Group.</p>
+        <p class="mt-5 text-xs text-dim"><a class="text-muted hover:text-fg" href="/privacy.html">Privacy</a> · <a class="text-muted hover:text-fg" href="/terms.html">Terms</a></p>
+      </footer>
+    </div>
     <div id="root"></div>
   </body>
 </html>
